@@ -25,6 +25,8 @@ These were imported into a PostgreSQL database for analysis.
 All SQL queries shown below are available in the [`route_analysis.sql`](SQL%20Files/route_analysis.sql) file. Each analysis provides unique insights into different aspects of the transit system:
 
 ### 🚍 1. Route Summary
+[View Results Screenshot](Screenshots/1.png)
+
 ```sql
 SELECT 
     r.route_id,
@@ -50,6 +52,8 @@ ORDER BY total_trip DESC;
 ```
 
 ### 🕐 2. Busiest Hours of the Day
+[View Results Screenshot](Screenshots/2.png)
+
 ```sql
 SELECT 
     EXTRACT(HOUR FROM st.arrival_time) AS hour_of_day,
@@ -60,6 +64,8 @@ ORDER BY number_of_stops DESC;
 ```
 
 ### 🛑 3. Unique Stops per Route
+[View Results Screenshot](Screenshots/3.png)
+
 ```sql
 SELECT
     r.route_short_name,
@@ -74,6 +80,8 @@ ORDER BY unique_stops DESC;
 ```
 
 ### 🔁 4. Route Frequency Analysis
+[View Results Screenshot](Screenshots/4.png)
+
 ```sql
 SELECT
     r.route_long_name,
@@ -88,6 +96,8 @@ ORDER BY average_trips_per_day;
 ```
 
 ### 📍 5. Most Frequently Used Stops
+[View Results Screenshot](Screenshots/5.png)
+
 ```sql
 SELECT
     s.stop_name,
@@ -101,6 +111,8 @@ ORDER BY times_stop_served DESC;
 ```
 
 ### ⏱ 6. Average Trip Duration
+[View Results Screenshot](Screenshots/6.png)
+
 ```sql
 WITH trip_durations AS (
     SELECT
@@ -129,6 +141,8 @@ ORDER BY average_trips_duration DESC;
 ```
 
 ### 📅 7. Most Active Days of the Week
+[View Results Screenshot](Screenshots/7.png)
+
 ```sql
 SELECT
     c.service_id,
@@ -149,6 +163,8 @@ ORDER BY trips_per_day DESC;
 ```
 
 ### 🚈 8. Transport Type Distribution
+[View Results Screenshot](Screenshots/8.png)
+
 ```sql
 SELECT
     CASE
@@ -168,6 +184,8 @@ ORDER BY total_trips DESC;
 ```
 
 ### 🧭 9. Average Time Between Stops
+[View Results Screenshot](Screenshots/9.png)
+
 ```sql
 WITH stop_times_with_next AS (
     SELECT
@@ -203,6 +221,8 @@ ORDER BY total_stops DESC;
 ```
 
 ### 📌 10. Routes per Stop
+[View Results Screenshot](Screenshots/10.png)
+
 ```sql
 SELECT 
     s.stop_name,
