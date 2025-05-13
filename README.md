@@ -11,12 +11,12 @@ This project analyzes **public transport data from Queensland's Translink** usin
 ## 📦 Dataset
 
 The data used in this project comes from the [Translink GTFS Feed](https://translink.com.au/about-translink/open-data), which provides real-time and scheduled transport data for Queensland, Australia. This includes:
-- `routes.txt` – Route information and transport types
-- `trips.txt` – Trip schedules and service patterns
-- `stop_times.txt` – Arrival and departure times
-- `stops.txt` – Stop locations and details
-- `calendar.txt` – Service availability by day
-- `calendar_dates.txt` – Service exceptions and holidays
+- `routes.csv` – Route information and transport types
+- `trips.csv` – Trip schedules and service patterns
+- `stop_times.csv` – Arrival and departure times
+- `stops.csv` – Stop locations and details
+- `calendar.csv` – Service availability by day
+- `calendar_dates.csv` – Service exceptions and holidays
 
 These were imported into a PostgreSQL database for analysis.
 
